@@ -1,3 +1,20 @@
+img {
+  display: block;
+  max-width: 100%;
+}
+
+header {
+  /*Do not use hard units on height! Causes overflow!*/
+  /* height: 600px; */
+
+  /* Use min-height instead! */
+  min-height: 600px;
+  background-color: teal;
+}
+
+/* unimportant style */
 body {
-  color: red;
+  margin: 0;
+  color: lightgray;
+  background-color: #000;
 }
