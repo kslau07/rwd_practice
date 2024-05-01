@@ -1,3 +1,10 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  color: orange;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -8,13 +15,74 @@ header {
   /* height: 600px; */
 
   /* Use min-height instead! */
-  min-height: 600px;
-  background-color: teal;
+  /* min-height: 600px; */
+  min-height: 80vh;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.article-author > img {
+  width: 250px;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+
+  /* !!! Do not do this! */
+  /* grid-template-columns: 1fr 1fr; */
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  margin-block: 2rem;
+}
+.product {
+  background-color: #000;
+  border-radius: 5px;
+  padding-block: 0.25rem;
+}
+
+.from {
+  color: gray;
+  margin-inline: 1rem;
+}
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: lightblue;
+  margin-inline: 1rem;
+}
+.buy {
+  color: white;
+  background-color: gray;
+  margin-inline: 1rem;
+  border-radius: 3px;
+  padding: 0.25rem;
+  width: min-content;
+}
+.product__description {
+  margin-inline: 1rem;
+  font-weight: bold;
 }
 
 /* unimportant style */
+
 body {
-  margin: 0;
+  margin: 0px;
   color: lightgray;
-  background-color: #000;
+  background-color: #333;
+  font-family: sans-serif;
+  letter-spacing: 0.015rem;
+
+  /* With border-box we can set width:100% + padding, and we won't overflow because */
+  /* border-box takes into account */
+  box-sizing: border-box;
+  /* width: 100%; */
+  /* padding: 1rem; */
+}
+header {
+  background-color: teal;
 }
